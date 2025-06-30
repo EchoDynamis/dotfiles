@@ -1,0 +1,161 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+
+"modules-center": [
+    "custom/previous",
+    "custom/music",
+    "custom/next"
+  ],
+
+"modules-right": [
+    "custom/microphone",   // <- use this instead of pulseaudio#microphone
+    "pulseaudio",
+    "network",
+    "bluetooth",
+    "battery",
+    "custom/calendar",
+    "clock",
+],
+
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "format-active": "■ {name}",
+    "active-only": false,
+    "all-outputs": true,
+    "css": "color: #1DD678;"
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%Y-%m-%d %H:%M}",
+    "css": "color: #1DD678;"
+  },
+
+  "calendar": {
+    "format": "{:%Y-%m-%d}",     // Shows date; tooltip shows calendar
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "weeks-pos": "left",
+      "format": "%b %Y",
+      "week-numbers": true
+    },
+    "css": "color: #1DD678;"
+  },
+
+
+
+"battery": {
+  "interval": 60,
+  "states": {
+    "full": 81,
+    "good": 61,
+    "warning": 41,
+    "critical": 21,
+    "urgent": 0
+  },
+  "format": "{capacity}%",
+  "format-full": "{capacity}%",
+  "format-good": "{capacity}%",
+  "format-warning": "{capacity}%",
+  "format-critical": "{capacity}%",
+  "format-urgent": "{capacity}% ⚡",
+  "tooltip": true
+},
+
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": "Muted",
+    "on-click": "pavucontrol",
+    "scroll-step": 5,
+    "icons": {
+      "default": ["🔈", "🔉", "🔊"]
+    },
+    "css": "color: #1DD678;"
+  },
+
+
+"custom/microphone": {
+  "format": "🎙️ {}%",
+  "interval": 5,
+  "exec": "pactl get-source-volume @DEFAULT_SOURCE@ | grep -oP '\\d+%' | head -1 | tr -d '%'",
+  "on-click": "pavucontrol",
+  "tooltip": false,
+  "css": "color: #1DD678;"
+},
+
+"custom/calendar": {
+  "format": "{}",
+  "interval": 60,
+  "exec": "date '+%Y-%m-%d'",
+  "tooltip": true,
+  "tooltip-format": "cal",
+  "on-click": "gsimplecal",
+  "css": "color: #1DD678;"
+},
+
+"custom/previous": {
+    "format": "⏮",
+    "exec": "echo 'Prev'",
+    "return-type": "static",
+    "on-click": "playerctl previous",
+    "tooltip": false,
+    "css": "color: #1DD678; padding-right: 10px;"
+},
+
+"custom/cover": {
+  "exec": "~/scripts/player-cover.sh",
+  "interval": 2,
+  "return-type": "json",
+  "format": "{}",
+  "tooltip": false
+},
+
+
+"custom/music": {
+    "format": "🎵 {}",
+    "interval": 2,
+    "exec": "sh -c \"playerctl metadata --format '{{artist}} - {{title}}' | sed 's/&/&/g'\"",
+    "tooltip": false,
+    "on-click": "playerctl play-pause",
+    "css": "color: #1DD678;"
+  },
+
+"custom/next": {
+    "format": "⏭",
+    "exec": "echo 'Next'",
+    "return-type": "static",
+    "on-click": "playerctl next",
+    "tooltip": false,
+    "css": "color: #1DD678; padding-left: 10px;"
+},
+
+
+
+  "network": {
+    "interface": "enp7s0",
+    "format-wifi": "{essid} {signalStrength}%",
+    "format-ethernet": "{ifname}: {ipaddr}",
+    "format-disconnected": "Disconnected",
+    "css": "color: #1DD678;"
+  },
+
+
+"bluetooth": {
+  "format": "",
+  "tooltip": true,
+  "tooltip-format-connected": "{controller_alias}\n\n{device_enumerate}",
+  "tooltip-format-enumerate-connected": "{device_alias}",
+  "on-click": "~/scripts/bluetui_toggle.sh"
+},
+
+
+
+}

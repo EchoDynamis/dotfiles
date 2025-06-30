@@ -1,0 +1,6 @@
+2025/06/30-16:49:32.814 e481 Reusing MANIFEST /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/Sync Data/LevelDB/MANIFEST-000001
+2025/06/30-16:49:32.815 e481 Recovering log #75
+2025/06/30-16:49:32.816 e481 Reusing old log /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/Sync Data/LevelDB/000075.log 
+2025/06/30-16:51:04.834 e495 Level-0 table #80: started
+2025/06/30-16:51:04.838 e495 Level-0 table #80: 63570 bytes OK
+2025/06/30-16:51:04.841 e495 Delete type=0 #75

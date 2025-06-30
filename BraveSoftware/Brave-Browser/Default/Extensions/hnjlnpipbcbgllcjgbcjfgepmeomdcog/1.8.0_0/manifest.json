@@ -1,0 +1,25 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "./res/icons/favicon-16x16.png",
+         "32": "./res/icons/favicon-32x32.png",
+         "96": "./res/icons/favicon-96x96.png"
+      },
+      "default_popup": "./popup/popup.html",
+      "default_title": "Click to customize fonts"
+   },
+   "background": {
+      "service_worker": "./js/background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "./js/content.js" ],
+      "matches": [ "https://*/*", "http://*/*" ]
+   } ],
+   "description": "Change fonts of any website with your locally installed fonts!",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjil5Z3NjB1gLFmMBRKHizUsVNdg9HBSpM386ZVYtmcCEED/7/8HObzIbRpGdrYgti46M330lz+4OWd0JEM+5FTE0mn2u6V+3+M1b5HR9rsnCctK+P7G3WEBAYPTbNoJlOnNiohfEf9B21Ny0tILVhRVpgA5iITYJJ00gfoyENuJOvgNHmjCt9SsND3tesy1zPpmrWKWtc/DCWl88c5nK/PAK7JqKDSzXxHijymE1BYUCLjzWLoNpqeMz0eeipMKtijfcPaWSVcLT3vZULFR8eV0rYSU2pHxIq83LxIX7wTyUSflR1CmHMgVpmdBEg/DIfbbAUSVwrTezIVZjryyDIwIDAQAB",
+   "manifest_version": 3,
+   "name": "Fontonic - Change Fonts",
+   "permissions": [ "storage", "tabs", "fontSettings" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.8.0"
+}

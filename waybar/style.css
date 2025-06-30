@@ -1,0 +1,109 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: monospace;
+  font-size: 16px;
+  min-height: 0;
+  color: #1bd775; /* emerald as base text */
+}
+
+window#waybar {
+  background-color: #000000;
+  transition: none;
+  padding: 4px 8px;
+}
+
+/* Workspaces */
+#workspaces button {
+  padding: 0 4px;
+  padding-left: 8px;
+  color: #1bd775;
+}
+
+#workspaces button.active {
+  color: #1bd775;
+}
+
+#workspaces button:hover {
+  color: #deff5d; /* chartreuse on hover */
+}
+
+/* Modules */
+#clock,
+#battery,
+#cpu,
+#memory,
+#tray,
+#pulseaudio,
+#custom-microphone,
+#network,
+#bluetooth,
+#custom-previous,
+#custom-music,
+#custom-next,
+#custom-calendar {
+  padding: 0 8px;
+  margin: 0 4px;
+  color: #1bd775; /* base emerald */
+}
+
+#custom-previous {
+  padding-right: 10px;
+}
+
+#custom-next {
+  padding-left: 10px;
+}
+
+/* Hover effect for clickable modules */
+#workspaces button:hover,
+#clock:hover,
+#battery:hover,
+#pulseaudio:hover,
+#custom-microphone:hover,
+#network:hover,
+#bluetooth:hover,
+#custom-previous:hover,
+#custom-music:hover,
+#custom-next:hover,
+#custom-calendar:hover {
+  color: #deff5d; /* chartreuse on hover */
+}
+
+/* Base battery: 100–81% → emerald */
+#battery {
+  color: #1bd775; /* emerald */
+}
+
+/* ≤80% → screamin' green */
+#battery.full {
+  color: #85f55d;
+}
+
+/* ≤60% → aureolin */
+#battery.good {
+  color: #ffee25;
+}
+
+/* ≤40% → safety orange */
+#battery.warning {
+  color: #ff7500;
+}
+
+/* ≤20% → red */
+#battery.critical {
+  color: #ff2525;
+}
+
+/* ≤5% → bittersweet (optional blinking effect if you add CSS anim) */
+#battery.urgent {
+  color: #ff5750;
+  animation: blink 1s infinite;
+}
+
+/* Optional blinking keyframes for urgent low battery */
+@keyframes blink {
+  0% { color: #ff2525; }
+  50% { color: #ff5000; }
+  100% { color: #ff2525; }
+}

@@ -1,0 +1,257 @@
+{
+   "checksum": "4db0180149cfaf23b3bf0883d4e2b1d1",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13392613437070398",
+            "date_last_used": "0",
+            "guid": "54ad9108-3291-4b23-906e-eccc75daee22",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Rust Manual",
+            "type": "url",
+            "url": "https://doc.rust-lang.org/book/"
+         }, {
+            "date_added": "13392617246987163",
+            "date_last_used": "0",
+            "guid": "5e59cbc5-9c1d-4ca1-8954-f043b7ebe5a8",
+            "id": "6",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "std::prelude - Rust",
+            "type": "url",
+            "url": "https://doc.rust-lang.org/std/prelude/index.html"
+         }, {
+            "date_added": "13392618570105523",
+            "date_last_used": "0",
+            "guid": "1730c6d6-d164-4a18-a012-a1a7f5afd6e9",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "crates.io",
+            "type": "url",
+            "url": "https://crates.io/"
+         }, {
+            "date_added": "13393038068481863",
+            "date_last_used": "0",
+            "guid": "e3669aaa-6a69-47ce-923f-ff840fcdf53e",
+            "id": "8",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "aquarium",
+            "type": "url",
+            "url": "https://www.aquarium.ru/en"
+         }, {
+            "date_added": "13393572390276020",
+            "date_last_used": "0",
+            "guid": "82dbe640-8e7e-4a10-8177-2d2c7e7cdd11",
+            "id": "9",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Sanos PDP-11 Simulator with UNIX V7",
+            "type": "url",
+            "url": "http://www.jbox.dk/sanos/pdp11.htm"
+         }, {
+            "date_added": "13394093270888795",
+            "date_last_used": "0",
+            "guid": "ed080bee-09c9-4f34-afaf-e4356135c017",
+            "id": "10",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Alacritty",
+            "type": "url",
+            "url": "https://alacritty.org/config-alacritty.html"
+         }, {
+            "date_added": "13394093289514175",
+            "date_last_used": "0",
+            "guid": "90154243-2194-4cd9-8511-6e7907b4b07a",
+            "id": "11",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Hyprland Wiki",
+            "type": "url",
+            "url": "https://wiki.hyprland.org/"
+         }, {
+            "date_added": "13394096107302379",
+            "date_last_used": "0",
+            "guid": "107365b1-fa3b-4844-9623-dd782773754c",
+            "id": "12",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Producer - X Media Studio",
+            "type": "url",
+            "url": "https://studio.x.com/producer"
+         }, {
+            "date_added": "13394345958242579",
+            "date_last_used": "0",
+            "guid": "092debef-6e82-4002-8787-83eff4e36f4a",
+            "id": "13",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Hyprspace",
+            "type": "url",
+            "url": "https://github.com/KZDKM/Hyprspace"
+         }, {
+            "date_added": "13395034063302852",
+            "date_last_used": "0",
+            "guid": "f16130cf-3a53-46b5-9b3f-e19093557466",
+            "id": "14",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Alexays/Waybar Wiki",
+            "type": "url",
+            "url": "https://github.com/Alexays/Waybar/wiki"
+         }, {
+            "date_added": "13395096999859513",
+            "date_last_used": "0",
+            "guid": "e4a50869-cef7-4aa6-af8b-872217a6a058",
+            "id": "15",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Home - OneDrive",
+            "type": "url",
+            "url": "https://onedrive.live.com/?id=root&cid=670C6D9CA909D370&qt=mru"
+         }, {
+            "date_added": "13395130652963539",
+            "date_last_used": "0",
+            "guid": "3e15af23-d116-4508-b341-16f2bb5af6c2",
+            "id": "16",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "In defence of swap: common misconceptions",
+            "type": "url",
+            "url": "https://chrisdown.name/2018/01/02/in-defence-of-swap.html"
+         } ],
+         "date_added": "13395566712055531",
+         "date_last_used": "0",
+         "date_modified": "13395130652963539",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13389579861950661",
+            "date_last_used": "0",
+            "guid": "1acb56c3-4f5c-474b-a75f-3750e68d371a",
+            "id": "17",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "FitGirl Repacks - The ONLY official site for FitGirl Repacks. Every single FG repack installer has a link inside, which leads here. Do not fall for fake and scam sites, which are using my name.",
+            "type": "url",
+            "url": "https://fitgirl-repacks.site/"
+         }, {
+            "date_added": "13390373880660401",
+            "date_last_used": "0",
+            "guid": "fdf21e22-4534-4c6a-b0c1-1304a40ae6d0",
+            "id": "18",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "King Wen sequence - Wikipedia",
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/King_Wen_sequence"
+         }, {
+            "date_added": "13390373887991946",
+            "date_last_used": "0",
+            "guid": "409b83b9-205e-4a25-a4f4-e82ab9c3b3e3",
+            "id": "19",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "I Ching - Wikipedia",
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/I_Ching"
+         }, {
+            "date_added": "13390373891491962",
+            "date_last_used": "0",
+            "guid": "aaa3e7f5-0103-4a7d-a16f-955c3899677e",
+            "id": "20",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Yin and yang - Wikipedia",
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Yin_and_yang"
+         }, {
+            "date_added": "13390373894133843",
+            "date_last_used": "0",
+            "guid": "1d459272-bd59-4308-8ffd-5eed9033a03a",
+            "id": "21",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Wuxing (Chinese philosophy) - Wikipedia",
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Wuxing_(Chinese_philosophy)"
+         }, {
+            "date_added": "13390373899057994",
+            "date_last_used": "0",
+            "guid": "4ffe26a5-1f4e-439d-b262-e6e564bcf000",
+            "id": "22",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Lianshan (book) - Wikipedia",
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Lianshan_(book)"
+         }, {
+            "date_added": "13390373901933836",
+            "date_last_used": "0",
+            "guid": "aecd4c4d-d949-4619-888e-26934460b5ce",
+            "id": "23",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Guicang - Wikipedia",
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Guicang"
+         }, {
+            "date_added": "13390373904921511",
+            "date_last_used": "0",
+            "guid": "ca6a3b19-46aa-4f51-8f15-fd72fd0f6428",
+            "id": "24",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Oracle bone - Wikipedia",
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Oracle_bone"
+         } ],
+         "date_added": "13395566712055531",
+         "date_last_used": "0",
+         "date_modified": "13390373904921511",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13395566712055531",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CooBChAIiIECEgrClv779WUAAAAAEgAaWE5ZaVNOYkh2eXIvdm5ndE13elpLVWoxdC9GeExjQzVjMm4zYnpJY0J3QndzaUJqekJlNXptY3lGMWE1VU4rUERkNkdURENQQ1VMQ1B0b00vWmtGeExBPT0qGHlzZm13UTNLcmwyTG1nTWpqSVlMZGc9PUgDEqcBCAUSogEKHE9tT054ZXhyTlI4MDIwZlUwRkNWZnpkQ3M3ND0SJDdjMjFlYmE1LTBlYzMtNGQxMi04NmRjLTZhN2QxYmVjMzYxMRgAIAAoADDc9ZfK+TI48fKXyvkyQPHyl8r5MkocMEpnb2JySHZIWWlwYURlRWV0Y0t3bjJxbWRFPVoeIhxvMmV1RGZKaEFhY2ZxNmxBTldPVGtxWEFHOVE9Ze54EjISqAEIFxKjAQocR0YwTkhTWW9zZVY3KzFhTjNBMXB1VmZRK3FvPRIkMmE4Y2RkNjctYjJlOC00YTkxLWEzNTAtOWMyNDUxMWE3ZGQ2GAAgACgAMJ31l8r5Mjjx8pfK+TJA8fKXyvkyShw3azRwc2tIVW45NHovckVXYVBpaDNNOE9xSjA9Wh8iHf1jdndyTmFxR0pNYWdUbGFCRVN6WXpRSFowb0k9ZeEuWRASqAEICBKjAQocd000NVUwVWkwVldqWEZjV3BPVGlMV0VieDlvPRIkNmY3MDhhNzAtM2FiYS00NmQzLTkyNGQtNmYzMTc3MTA3Y2ZmGAAgACgAMOGPoMr5Mjjx8pfK+TJA8fKXyvkyShwwMTlaeVZlMUJsT3FLNWhpWTZSS20zcnRDd0U9Wh8iHe0wMjNDL2ErRDlyRERuQXM4cU9ibytnaDZqa0k9ZVlp2j4SgwEIARJ/Chx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9EiQ1MGFlNGQ4YS01NGUwLTQ5ZDgtOTkxZi0yYTc3N2Q5OTcwODcYACAAKAAwATi87ZfK+TJAvO2XyvkyShxhUkNXTGdoRjliNUlucUtJRHZ1Si9qdlFrRmM9WgBlAAAAABKoAQgGEqMBChxaTGZqNG1ZZEQ5SkRVOHBJblJmRnViT3hPVWM9EiRiYWNjMTJiMy0zZjIyLTRmOTgtOWYxYi1iZjg3NjM3ODMwZGMYACAAKAAw3Y+gyvkyOPHyl8r5MkDx8pfK+TJKHDM1TFd6MnlZZmdiOEdaMlBnYWF0L3EyZ2ZrTT1aHyIdt1hKbXU4V1B0R1BUR2hVYVMvbzJaekZLODNyUT1lYKazZRKoAQgSEqMBChxMaW9hMG56WndVVkpncVd4MkNoTXhnbEJvVFU9EiRjYTllNWRmYS1lZjgxLTRlZWMtODQyNy0wNjg0YTA1ODQ5NDQYACAAKAAwi/WXyvkyOPHyl8r5MkDx8pfK+TJKHGxnMkVGWkM0TzQwdkpaaTlTZ2w3UXpDMWlUZz1aHyIdtlF2VVVCVm9OOVpEdEpwVmkvY3dUZkpyZ1pNOD1l4S5ZEBKoAQgJEqMBChxvbnVFYWt4b1RHbnhhWEV3OGVUQnNzaG5kaWs9EiQyMmQyYTMxZC00NDVlLTQzMWEtOTY1OC0yYjgwMTkzMzVhMjMYACAAKAAw5o+gyvkyOPHyl8r5MkDx8pfK+TJKHE9uQ1hjNnZ4NmpHK3hONmRvQlNPeTk1bmhwdz1aHyId9kpPTnhhVU9NaWxPM20wVmpMSXhjVG1qK21lTT1lI694khKoAQgLEqMBChxvYS95bElrRnkrUUZEZTNzaGwzbGpDV1poTGs9EiRjZDA5MDc5Ni00YTc4LTQwZDEtODBkYS00ZWQzZTQxZjczNjkYACAAKAAwmI+gyvkyOP7Nn8r5MkD+zZ/K+TJKHEVxTmxxcXhPZXFWcElrSW9sNWpwYWxLa2YyYz1aHyId/VlXOXhMQ29qaWs4U2ZLc0FEalVtdko3UTR1dz1l/fjawhKoAQgMEqMBChwrYm80UWM5bmFnRk9icmFCeE1rWFYvOEhXbFE9EiQ5OGExYzUzZi05YmRmLTRkNDQtOWQ3Mi0zZmRhNTE1ZjljMjMYACAAKAAwzI+gyvkyOP7Nn8r5MkD+zZ/K+TJKHGZOdnNBUTNiTGJkSDBWSmV0KzFaRHRFUlJqQT1aHyId/mV0RHhBbFRpZkF3NnFaTDRHTU9NSkw4OU9XZz1leSB87BKoAQgNEqMBChxLZ3h4akQzOGZpTi9STEVkTUtsMVRPKzJrUkk9EiRiMTU5YjNiYy1hY2FiLTRiNjctOWQ3ZC1jOTUxOTdjNjgwZmQYACAAKAAwvI+gyvkyOP7Nn8r5MkD+zZ/K+TJKHGd3bS9NcHFRemJMSWN4SFUydlZPMkQ5L2ljYz1aHyId/2FiV3hiMFYxYmRvT3cwUFQ0MlhBS2dqTzBWZz1lyPM/uxKoAQgKEqMBChxIOG8zTXRsYkgwMlJxWDE5UVd3TWd0aFhwdzQ9EiQ3N2JkOWI1OC0yZGUzLTQyZjEtYjAxMS1mZmYzNmY3ZGE4NmEYACAAKAAw7I+gyvkyOP7Nn8r5MkD+zZ/K+TJKHEVqWG9heGg5ZytHSTBQUFNxdWhrUzAxcFlobz1aHyId+25tbVNCT256VXZsTjFVNFdQR2U1SCt6d0pmST1lI4oTIBKoAQgHEqMBChwvOExweXVSMGlJZ3l2Ry9OVlF1QjU4THhXNU09EiQ3MjRjOGJhZS04Njk5LTQxOWMtOGYwNC1hYjY0ZjNmYWE1Y2UYACAAKAAwoYv//foyOPHyl8r5MkDx8pfK+TJKHFJ3bHM4a1MzZ0RiYWNZNUtOYTM4bEdjQUhzND1aHyId20ZnMVhsMnpzNUMvYzNKTTFCaWZseUxOZVlCbz1lK4i7qBKoAQgWEqMBChxxbS9UajRFSGY4eEZxd0ZKbUJGdENjUWpsRUk9EiQ1OWY2YmUwMi03NmVjLTQzMTQtOGRiNy00N2IyM2I3YWM0NTYYACAAKAAwvfWXyvkyOPHyl8r5MkDx8pfK+TJKHDJaWXplVmdqZmx2SlV4V00wT1A2ak45cCtjcz1aHyId+3d1WUJKT1I0dWxkT2JPRmpaR0V0cDZ5aXUyST1l4S5ZEBKpAQgPEqQBChxyMjJySUdmSUdkVXViZDJhQzFrZE8rc2ZiNVk9EiQ3MTc3YzI4Zi0wZWMyLTQzZjktOGExNC0yOGRjZjU4NWE0ZWIYACAAKAAw8LGlyvkyOLTfpMr5MkC036TK+TJKHEFlYkxaV2lINkd5U1AvVXRHNm9ySm93dU1PWT1aICIe/9h3SUJxRmFEOFJ4d3VXd3I4ejZEZ2NKTWl4QVE9ZQDqE0wSpwEIERKiAQoccXNHbXhKWVZ4UEd1Smc5aUV6UTFTQ2VaMC9rPRIkMjBlYzNjM2UtNDU3My00MjkzLTkzYjgtNTM1YmM1OGRlNGRiGAAgACgAMPX1l8r5Mjjx8pfK+TJA8fKXyvkyShxpWlA0VHRiaDhKc2lUczhxV0RIOWJCa2w1c0U9Wh4iHG1id25EalBJdXkvN0l5bEhCamkvUndEdHcvOD1lAlanTBKpAQgQEqQBChxxcWFsNHZrTThOTHU2amUwZzdydkc3UmVDY289EiRiNTdmNDE5Ny02NWRiLTQ4NzMtYWRjMC02Mjc3ZTNmMzViODYYACAAKAAwseyq2vkyOKPiqtr5MkCj4qra+TJKHDF0ZUlaZSs0SzJwcmxEYlRVeWRpTVFQYU1NMD1aICIe/+xrSndSUnJUbWZtRnBmaWRZZVRUR0d3NG5tYXc9ZX2rd48SqAEIExKjAQocRzBGaGdqVjNUdXVPVW9OWXkxV3ZwYkMxWXpZPRIkNWQwNDg2MjQtMWY3ZS00NDI1LWE2MjYtZmQ1MjBjYzlhZjIxGAAgACgAMKL2l8r5Mjjx8pfK+TJA8fKXyvkyShxRbG91ZGxxYjJSWitsMVJFTjBhbUE1ODNIL0E9Wh8iHdtxV0VNZThJQUZ2ZUlaTVFBOWdmZWJPaE9rdTA9ZeEuWRASqAEIFRKjAQocTXgvZGxWZGFzT3Znd1hxNnVXM2xnV3FUMW5zPRIkYjM5ZmZjNGMtZDgzYS00MjM3LWI2YWYtMzlkYjhkNDFlODMyGAAgACgAMPv0l8r5Mjjx8pfK+TJA8fKXyvkyShxkSit6VmRwWGp5U1VHUmw4SmdkTlBHODdoLzg9Wh8iHfY3S0NRTUNoWUdCY3V4VTgvOFMvWkczbjdGd1E9ZeEuWRASqQEIDhKkAQocTUI5cGlxWFZ2T0FtRExBaGNZZDA3d0VvdXlNPRIkZTE0ZjE0MGMtZmEzYS00Y2M5LWJiM2QtNjAwOWI4NmU2Zjc1GAAgACgAMKyPoMr5Mjj+zZ/K+TJA/s2fyvkyShxWL0tBYkJMTllDUHhFSFdGSkFPVVRsc2FreHM9WiAiHv+wWGRleE5xVUJoRFdxT3Z2azROVHZDMkV6VktjPWXI8z+7EoMBCAMSfwocbmpnRHU4OGVDcnZYcDg2cEQ3ZkhHY3FGcDg4PRIkMTIxMzUxN2YtMzYwNi00ZDcwLTgxMTYtN2YxMjNlMTQ5NTQyGAAgACgAMAE4vO2XyvkyQLztl8r5MkoceXpOQjAxY241NEE3Y1JVMHVUKy9QZ21UdFVvPVoAZQAAAAASqAEIFBKjAQocTTNaK2lGeGZ1S0JXVUpNaUp6RS9RTW1IMnNvPRIkNWEyMGI3MzMtYTQwZS00NmUxLTllNjAtMzQ0ZWZhYWFhN2JhGAAgACgAMKz1l8r5Mjjx8pfK+TJA8fKXyvkyShxxbTdzUXBOSnVJejBnV1paSGVYOFlmWlB1Q3M9Wh8iHe01UVhNKy9yZ2ZMckZVNWIvMUg5Z1hZY0xvc0k9ZeEuWRASgwEIAhJ/ChxZY1NUb252RVNQd3FDczRMMmNyVmh2NjhMOTg9EiQ5YTk3NzdlMi0zMGViLTQ2NWMtYWU1My0zMGQxYWU3MGJjNmUYACAAKAAwATi87ZfK+TJAvO2XyvkyShxvUFZraHdCUmJWNjVLQ1dSMitJT05IV29PdTg9WgBlAAAAABKoAQgYEqMBChw3a2JxNGNKNy8wWGczaFN3UHlFNTRRZWtqN0k9EiQ2MDNlYjU4Ni0zZWM2LTQyOGEtOWU1NC1mM2ZjZmMzNjA3MjAYACAAKAAwlPaXyvkyOPHyl8r5MkDx8pfK+TJKHDlWWVlONXFXNkx1c0pYeTJnTEJZekZneHlCbz1aHyId/mhRTm1md0lzUTJzTW1kNUozeTkxVENLckppWT1l4S5ZEDABOAA=",
+   "version": 1
+}
