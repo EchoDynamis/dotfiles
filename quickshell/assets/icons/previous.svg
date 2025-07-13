@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" enable-background="new 0 0 76.00 76.00" xml:space="preserve">
-	<path fill="#000000" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 57,27.7083L 57,48.2917L 43.5417,38L 57,27.7083 Z M 39.5833,27.7083L 39.5833,48.2917L 26.125,38L 39.5833,27.7083 Z M 23.75,28.5L 23.75,47.5L 19,47.5L 19,28.5L 23.75,28.5 Z "/>
+<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22 6L13.2571 12.1714L22 18.3429V6ZM19.9429 14.3726L16.8263 12.1714L19.9429 9.9703V14.3726Z" fill="#000000"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4 12.1714V18.3429H2V6.34286H4V12.1714ZM4 12.1714L12.7429 6V18.3429L4 12.1714Z" fill="#000000"/>
+<path d="M10.6857 14.3726L7.56914 12.1714L10.6857 9.9703V14.3726Z" fill="#000000"/>
 </svg>

@@ -7,8 +7,8 @@ import "."
 
 PopupWindow {
     id: powerMenu
-    width: 400
-    height: 300
+    implicitWidth: 400
+    implicitHeight: 300
     color: Theme.black
     visible: false
 

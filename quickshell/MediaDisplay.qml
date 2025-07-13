@@ -11,6 +11,8 @@ RowLayout {
     signal clicked()
 
     spacing: 10
+    implicitWidth: 400
+    implicitHeight: 50
 
     // Previous Button
     Button {
@@ -19,7 +21,8 @@ RowLayout {
         Layout.preferredHeight: 40
         background: Rectangle { color: "transparent" }
         Image {
-            source: "assets/icons/previous.svg"
+            id: prevImage
+            source: "assets/icons/previous_emerald.svg"
             anchors.fill: parent
             anchors.centerIn: parent
             fillMode: Image.PreserveAspectFit
@@ -28,6 +31,9 @@ RowLayout {
             if (Players.active && Players.active.canGoPrevious) {
                 Players.active.previous()
             }
+        }
+        onHoveredChanged: {
+            prevImage.source = hovered ? "assets/icons/previous_chartreuse.svg" : "assets/icons/previous_emerald.svg"
         }
     }
 
@@ -47,6 +53,7 @@ RowLayout {
                 }
             }
             color: Theme.emerald
+            font.family: "Orbitron"
             font.pixelSize: 16 // Based on design language for 4K
             font.bold: true
             horizontalAlignment: Text.AlignHCenter
@@ -62,7 +69,8 @@ RowLayout {
         Layout.preferredHeight: 40
         background: Rectangle { color: "transparent" }
         Image {
-            source: "assets/icons/next.svg"
+            id: nextImage
+            source: "assets/icons/next_emerald.svg"
             anchors.fill: parent
             anchors.centerIn: parent
             fillMode: Image.PreserveAspectFit
@@ -71,6 +79,9 @@ RowLayout {
             if (Players.active && Players.active.canGoNext) {
                 Players.active.next()
             }
+        }
+        onHoveredChanged: {
+            nextImage.source = hovered ? "assets/icons/next_chartreuse.svg" : "assets/icons/next_emerald.svg"
         }
     }
 }

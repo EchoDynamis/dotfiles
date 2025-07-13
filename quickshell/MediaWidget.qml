@@ -63,16 +63,92 @@ Item {
                 Layout.fillHeight: true
                 spacing: 10
 
-                // Song Name - Artist Name
-                Text {
-                    id: trackInfoText
+                // Media Controls (Previous, Song Title, Next)
+                Item {
                     Layout.fillWidth: true
-                    text: player ? (player.trackTitle || "Unknown Title") + " - " + (player.trackArtist || "Unknown Artist") : "No media playing"
-                    color: Theme.emerald
-                    font.pixelSize: 24
-                    font.bold: true
-                    wrapMode: Text.WordWrap
-                    horizontalAlignment: Text.AlignHCenter
+                    Layout.preferredHeight: 60
+
+                    Button {
+                        id: prevButton
+                        width: 60
+                        height: 60
+                        anchors.left: parent.left
+                        background: Rectangle { color: "transparent" }
+                        Image {
+                            id: prevImage
+                            source: "assets/icons/previous_emerald.svg"
+                            anchors.fill: parent
+                            anchors.centerIn: parent
+                            fillMode: Image.PreserveAspectFit
+                        }
+                        onClicked: {
+                            if (player && player.canGoPrevious) {
+                                player.previous()
+                            }
+                        }
+                        onHoveredChanged: {
+                            prevImage.source = hovered ? "assets/icons/previous_chartreuse.svg" : "assets/icons/previous_emerald.svg"
+                        }
+                    }
+
+                    Text {
+                        id: trackInfoText
+                        anchors.left: prevButton.right
+                        anchors.right: nextButton.left
+                        anchors.verticalCenter: parent.verticalCenter
+                        anchors.leftMargin: 10
+                        anchors.rightMargin: 10
+                        text: player ? (player.trackTitle || "Unknown Title") + " - " + (player.trackArtist || "Unknown Artist") : "No media playing"
+                        color: Theme.emerald
+                        font.family: "Orbitron"
+                        font.pixelSize: 24
+                        font.bold: true
+                        wrapMode: Text.WordWrap
+                        horizontalAlignment: Text.AlignHCenter
+                    }
+
+                    Button {
+                        id: nextButton
+                        width: 60
+                        height: 60
+                        anchors.right: parent.right
+                        background: Rectangle { color: "transparent" }
+                        Image {
+                            id: nextImage
+                            source: "assets/icons/next_emerald.svg"
+                            anchors.fill: parent
+                            anchors.centerIn: parent
+                            fillMode: Image.PreserveAspectFit
+                        }
+                        onClicked: {
+                            if (player && player.canGoNext) {
+                                player.next()
+                            }
+                        }
+                        onHoveredChanged: {
+                            nextImage.source = hovered ? "assets/icons/next_chartreuse.svg" : "assets/icons/next_emerald.svg"
+                        }
+                    }
+                }
+
+                // Play/Pause Button
+                Button {
+                    id: playPauseButton
+                    Layout.alignment: Qt.AlignHCenter
+                    Layout.preferredWidth: 60
+                    Layout.preferredHeight: 60
+                    background: Rectangle { color: "transparent" }
+                    Image {
+                        source: player && player.playbackState === MprisPlaybackState.Playing ? "assets/icons/pause.svg" : "assets/icons/play.svg"
+                        anchors.fill: parent
+                        anchors.centerIn: parent
+                        fillMode: Image.PreserveAspectFit
+                    }
+                    onClicked: {
+                        if (player && player.canTogglePlaying) {
+                            player.togglePlaying()
+                        }
+                    }
                 }
 
                 // Progress Slider
@@ -129,67 +205,6 @@ Item {
                     color: Theme.silver
                     font.pixelSize: 14
                     horizontalAlignment: Text.AlignHCenter
-                }
-
-                // Media Controls (Previous, Play/Pause, Next)
-                RowLayout {
-                    Layout.fillWidth: true
-                    Layout.alignment: Qt.AlignHCenter
-                    spacing: 20
-
-                    Button {
-                        id: prevButton
-                        Layout.preferredWidth: 60
-                        Layout.preferredHeight: 60
-                        background: Rectangle { color: "transparent" }
-                        Image {
-                            source: "assets/icons/previous.svg"
-                            anchors.fill: parent
-                            anchors.centerIn: parent
-                            fillMode: Image.PreserveAspectFit
-                        }
-                        onClicked: {
-                            if (player && player.canGoPrevious) {
-                                player.previous()
-                            }
-                        }
-                    }
-
-                    Button {
-                        id: playPauseButton
-                        Layout.preferredWidth: 60
-                        Layout.preferredHeight: 60
-                        background: Rectangle { color: "transparent" }
-                        Image {
-                            source: player && player.playbackState === MprisPlaybackState.Playing ? "assets/icons/pause.svg" : "assets/icons/play.svg"
-                            anchors.fill: parent
-                            anchors.centerIn: parent
-                            fillMode: Image.PreserveAspectFit
-                        }
-                        onClicked: {
-                            if (player && player.canTogglePlaying) {
-                                player.togglePlaying()
-                            }
-                        }
-                    }
-
-                    Button {
-                        id: nextButton
-                        Layout.preferredWidth: 60
-                        Layout.preferredHeight: 60
-                        background: Rectangle { color: "transparent" }
-                        Image {
-                            source: "assets/icons/next.svg"
-                            anchors.fill: parent
-                            anchors.centerIn: parent
-                            fillMode: Image.PreserveAspectFit
-                        }
-                        onClicked: {
-                            if (player && player.canGoNext) {
-                                player.next()
-                            }
-                        }
-                    }
                 }
             }
         }
