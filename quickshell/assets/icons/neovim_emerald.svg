@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   fill="#000000"
+   width="800px"
+   height="800px"
+   viewBox="0 0 24 24"
+   role="img"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="neovim_emerald.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="329.51176"
+     inkscape:cy="453.25544"
+     inkscape:window-width="1884"
+     inkscape:window-height="1024"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">Neovim icon</title>
+  <path
+     d="M2.902,4.998l3.864,5.754v12.151l-4.207-4.198V5.344L2.902,4.998 M2.97,4.287L2.107,5.158v13.734l5.112,5.101 v-13.38L2.97,4.287L2.97,4.287z M21.858,5.207L16.676,0v13.331l4.335,6.519c0,0,0.882-0.957,0.882-0.957L21.858,5.207z M7.215,0.001 l13.29,20.28L16.786,24L3.489,3.765L7.215,0.001z"
+     id="path1"
+     style="fill:#1bd775;fill-opacity:1" />
+  <path
+     style="fill:#1bd775;fill-opacity:1;stroke-width:1.41421"
+     d="M 338.13108,461.46498 117.2362,125.31351 178.46813,64.069443 c 33.67756,-33.684235 61.697,-61.0842792 62.26543,-60.8889866 1.20149,0.4127949 440.91737,671.1626736 440.91737,672.5826536 0,1.17644 -120.60051,121.85334 -121.7762,121.85334 -0.46682,0 -100.25146,-151.26816 -221.74365,-336.15147 z"
+     id="path7"
+     transform="scale(0.03)" />
+  <path
+     style="fill:#1bd775;fill-opacity:1"
+     d="M 628.75279,552.36328 557.20014,444.52174 V 223.34806 2.1743884 l 85.20637,86.1243956 85.20636,86.124386 0.70711,227.09739 0.70711,227.09737 -5.56297,6.36396 c -3.05962,3.50018 -9.522,10.60722 -14.36081,15.79344 l -8.79787,9.42948 z"
+     id="path8"
+     transform="scale(0.03)" />
+  <path
+     style="fill:#1bd775;fill-opacity:1;stroke-width:1.41421"
+     d="m 155.20994,713.11727 -84.499262,-84.50811 0.05955,-227.684 0.05954,-227.684 14.023924,-14.54599 14.023924,-14.546 13.030804,19.49574 c 7.16694,10.72266 39.01513,58.14466 70.77375,105.38223 l 57.74295,85.88648 -0.35796,221.35588 -0.35796,221.35587 z m 71.06423,-152.3569 V 357.84541 l -64.64343,-96.19445 -64.643434,-96.19447 -6.067246,5.95455 -6.067247,5.95456 V 400.86514 624.36468 L 154.49747,694.02 c 38.30457,38.31042 70.12437,69.65532 70.71068,69.65532 0.58632,0 1.06602,-91.31172 1.06602,-202.91495 z"
+     id="path9"
+     transform="scale(0.03)" />
+  <metadata
+     id="metadata9">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Neovim icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

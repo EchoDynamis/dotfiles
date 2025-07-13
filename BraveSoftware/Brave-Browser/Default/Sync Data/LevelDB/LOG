@@ -1,6 +1,48 @@
-2025/06/30-16:49:32.814 e481 Reusing MANIFEST /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/Sync Data/LevelDB/MANIFEST-000001
-2025/06/30-16:49:32.815 e481 Recovering log #75
-2025/06/30-16:49:32.816 e481 Reusing old log /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/Sync Data/LevelDB/000075.log 
-2025/06/30-16:51:04.834 e495 Level-0 table #80: started
-2025/06/30-16:51:04.838 e495 Level-0 table #80: 63570 bytes OK
-2025/06/30-16:51:04.841 e495 Delete type=0 #75
+2025/07/12-16:50:10.331 fa9d Reusing MANIFEST /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/Sync Data/LevelDB/MANIFEST-000001
+2025/07/12-16:50:10.332 fa9d Recovering log #373
+2025/07/12-16:50:10.334 fa9d Reusing old log /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/Sync Data/LevelDB/000373.log 
+2025/07/12-16:52:43.057 faab Level-0 table #377: started
+2025/07/12-16:52:43.060 faab Level-0 table #377: 64374 bytes OK
+2025/07/12-16:52:43.063 faab Delete type=0 #373
+2025/07/12-17:22:50.204 faac Level-0 table #379: started
+2025/07/12-17:22:50.207 faac Level-0 table #379: 70526 bytes OK
+2025/07/12-17:22:50.209 faac Delete type=0 #376
+2025/07/12-17:22:50.209 faac Compacting 4@0 + 1@1 files
+2025/07/12-17:22:50.213 faac Generated table #380@0: 109 keys, 15326 bytes
+2025/07/12-17:22:50.213 faac Compacted 4@0 + 1@1 files => 15326 bytes
+2025/07/12-17:22:50.214 faac compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/07/12-17:22:50.214 faac Delete type=2 #372
+2025/07/12-17:22:50.214 faac Delete type=2 #374
+2025/07/12-17:22:50.214 faac Delete type=2 #377
+2025/07/12-17:22:50.214 faac Delete type=2 #379
+2025/07/12-17:22:50.214 faac Delete type=2 #370
+2025/07/12-17:40:55.898 faab Level-0 table #382: started
+2025/07/12-17:40:55.901 faab Level-0 table #382: 76866 bytes OK
+2025/07/12-17:40:55.904 faab Delete type=0 #378
+2025/07/12-17:49:31.936 faab Level-0 table #384: started
+2025/07/12-17:49:31.938 faab Level-0 table #384: 71280 bytes OK
+2025/07/12-17:49:31.941 faab Delete type=0 #381
+2025/07/12-18:00:53.472 fa9e Level-0 table #386: started
+2025/07/12-18:00:53.474 fa9e Level-0 table #386: 105393 bytes OK
+2025/07/12-18:00:53.478 fa9e Delete type=0 #383
+2025/07/12-18:26:05.342 faac Level-0 table #388: started
+2025/07/12-18:26:05.344 faac Level-0 table #388: 67207 bytes OK
+2025/07/12-18:26:05.347 faac Delete type=0 #385
+2025/07/12-18:26:05.347 faac Compacting 4@0 + 1@1 files
+2025/07/12-18:26:05.351 faac Generated table #389@0: 109 keys, 16432 bytes
+2025/07/12-18:26:05.351 faac Compacted 4@0 + 1@1 files => 16432 bytes
+2025/07/12-18:26:05.352 faac compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/07/12-18:26:05.352 faac Delete type=2 #384
+2025/07/12-18:26:05.352 faac Delete type=2 #386
+2025/07/12-18:26:05.352 faac Delete type=2 #382
+2025/07/12-18:26:05.352 faac Delete type=2 #380
+2025/07/12-18:26:05.352 faac Delete type=2 #388
+2025/07/12-18:52:16.171 fa9d Level-0 table #391: started
+2025/07/12-18:52:16.174 fa9d Level-0 table #391: 64748 bytes OK
+2025/07/12-18:52:16.177 fa9d Delete type=0 #387
+2025/07/12-19:02:50.893 fa9e Level-0 table #393: started
+2025/07/12-19:02:50.896 fa9e Level-0 table #393: 89769 bytes OK
+2025/07/12-19:02:50.897 fa9e Delete type=0 #390
+2025/07/12-19:27:59.422 faac Level-0 table #395: started
+2025/07/12-19:27:59.425 faac Level-0 table #395: 76464 bytes OK
+2025/07/12-19:27:59.428 faac Delete type=0 #392

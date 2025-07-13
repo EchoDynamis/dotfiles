@@ -1,2 +1,6 @@
-2025/06/28-12:25:56.735 509 Creating DB /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_pro.x.com_0.indexeddb.leveldb since it was missing.
-2025/06/28-12:25:56.737 509 Reusing MANIFEST /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_pro.x.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/07/11-15:56:40.392 5f7 Reusing MANIFEST /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_pro.x.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/07/11-15:56:40.392 5f7 Recovering log #4
+2025/07/11-15:56:40.404 5f7 Reusing old log /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_pro.x.com_0.indexeddb.leveldb/000004.log 
+2025/07/11-15:56:41.785 5f6 Level-0 table #8: started
+2025/07/11-15:56:41.813 5f6 Level-0 table #8: 2932335 bytes OK
+2025/07/11-15:56:41.816 5f6 Delete type=0 #4

@@ -1,0 +1,12 @@
+2025/07/10-11:22:52.904 cefd Reusing MANIFEST /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/07/10-11:22:52.904 cefd Recovering log #40
+2025/07/10-11:22:52.910 cefd Reusing old log /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000040.log 
+2025/07/10-11:24:57.574 cefd Level-0 table #45: started
+2025/07/10-11:24:57.581 cefd Level-0 table #45: 1074916 bytes OK
+2025/07/10-11:24:57.584 cefd Delete type=0 #40
+2025/07/10-12:16:35.012 cefc Compacting 1@1 + 1@2 files
+2025/07/10-12:16:35.017 cefc Generated table #46@1: 348 keys, 51400 bytes
+2025/07/10-12:16:35.017 cefc Compacted 1@1 + 1@2 files => 51400 bytes
+2025/07/10-12:16:35.018 cefc compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/07/10-12:16:35.018 cefc Delete type=2 #42
+2025/07/10-12:16:35.018 cefc Delete type=2 #45

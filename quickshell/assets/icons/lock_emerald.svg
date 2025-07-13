@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   fill="#000000"
+   width="600"
+   height="400"
+   viewBox="0 0 24 16"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="lock_emerald.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1"
+     inkscape:cx="211"
+     inkscape:cy="260.5"
+     inkscape:window-width="1884"
+     inkscape:window-height="1024"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">lock</title>
+  <path
+     d="M 12,12 V 8 h 4 v 8 H 0 V 8 h 4 v 4 z M 8,0 v 8 h 4 V 4 h 8 v 4 h 4 V 0 Z"
+     id="path1"
+     style="fill:#deff5d" />
+  <path
+     style="fill:#deff5d;stroke-width:0.0376914"
+     d="M 0.03298,11.995288 V 8.0188456 H 2.0117784 3.9905772 V 10.01649 12.014134 H 8.0047116 12.018846 V 10.01649 8.0188456 h 1.978798 1.978799 v 3.9764424 3.976444 H 8.0047116 0.03298 Z"
+     id="path2" />
+  <path
+     style="fill:#deff5d;stroke-width:0.0376914"
+     d="M 8.0235572,4.0047116 V 0.0282684 H 15.995288 23.96702 V 4.0047116 7.9811544 H 21.988222 20.009423 V 5.98351 3.9858656 H 15.995288 11.981154 V 5.98351 7.9811544 H 10.002356 8.0235572 Z"
+     id="path3" />
+  <metadata
+     id="metadata3">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>lock</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="fill:#1bd775;fill-opacity:1"
+     d="M 200,100 V 0 H 400 600 V 100 200 H 550 500 V 150 100 H 400 300 v 50 50 h -50 -50 z"
+     id="path4"
+     transform="scale(0.04)" />
+  <path
+     style="fill:#1bd775;fill-opacity:1"
+     d="M 0,300 V 200 h 50 50 v 50 50 h 100 100 v -50 -50 h 50 50 V 300 400 H 200 0 Z"
+     id="path5"
+     transform="scale(0.04)" />
+  <path
+     style="fill:#00d775;fill-opacity:1"
+     d="M 200,100 V 0 H 400 600 V 100 200 H 550 500 V 150 100 H 400 300 v 50 50 h -50 -50 z"
+     id="path6"
+     transform="scale(0.04)" />
+</svg>

@@ -1,0 +1,10 @@
+2025/07/03-12:46:51.865 83da Creating DB /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/WebStorage/32/IndexedDB/indexeddb.leveldb since it was missing.
+2025/07/03-12:46:51.868 83da Reusing MANIFEST /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/WebStorage/32/IndexedDB/indexeddb.leveldb/MANIFEST-000001
+2025/07/03-12:46:51.938 83d9 Level-0 table #5: started
+2025/07/03-12:46:51.940 83d9 Level-0 table #5: 2722 bytes OK
+2025/07/03-12:46:51.941 83d9 Delete type=0 #3
+2025/07/03-12:46:51.941 83d8 Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/07/03-12:47:17.697 83c9 Level-0 table #7: started
+2025/07/03-12:47:17.699 83c9 Level-0 table #7: 14390 bytes OK
+2025/07/03-12:47:17.700 83c9 Delete type=0 #4
+2025/07/03-12:47:17.701 83c9 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)
