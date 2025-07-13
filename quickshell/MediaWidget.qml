@@ -1,16 +1,17 @@
+pragma ComponentBehavior: Bound
+
 import Quickshell
 import Quickshell.Widgets
+import Quickshell.Services.Mpris
+import QtQuick
+import QtQuick.Controls
 import QtQuick.Effects
 import QtQuick.Layouts
 import QtQuick.Shapes
-import QtQuick
-import QtQuick.Controls
-import QtQuick.Layouts
-import Quickshell.Services.Mpris
 import "./Players.qml"
-import "./Theme.qml" 
+import "./Theme.qml"
 
-PopupWindow {
+Item {
     id: mediaWidgetRoot
 
     readonly property MprisPlayer player: Players.active
@@ -18,13 +19,11 @@ PopupWindow {
     width: 800 // Example width, adjust as needed
     height: 550 // Example height, adjust as needed (500 for image + padding)
 
-    background: Item {
-        Rectangle {
-            anchors.fill: parent
-            color: Theme.black
-            opacity: 0.7 // Hyprland blur effect
-            radius: 8 // Rounded corners for eyecandy
-        }
+    Rectangle {
+        anchors.fill: parent
+        color: Theme.black
+        opacity: 0.7 // Hyprland blur effect
+        radius: 8 // Rounded corners for eyecandy
     }
 
     ColumnLayout {

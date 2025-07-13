@@ -92,7 +92,6 @@ Scope {
       MediaWidget {
           id: mediaWidgetInstance
           visible: false
-          screen: modelData // Pass the screen property
           x: (parent.width - width) / 2 // Center horizontally
           y: parent.height + 4 // 4px gap below the bar
       }
