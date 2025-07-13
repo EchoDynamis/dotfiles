@@ -7,12 +7,13 @@ Text {
     id: indicator
     property var workspace
     visible: workspace.id >= 0
+    property bool isHovered: false // New property to track hover state
 
     // Determine if this workspace is the one currently focused.
     readonly property bool isActive: Hyprland.focusedWorkspace ? workspace.id === Hyprland.focusedWorkspace.id : false
 
     text: workspace.name
-    color: isActive ? Theme.electricBlue : Theme.emerald
+    color: (isActive || isHovered) ? Theme.chartreuse : Theme.emerald // Color depends on active or hover state
     font.family: Theme.fontFamilyText
     font.pixelSize: Theme.fontSizeBase
 
@@ -20,22 +21,13 @@ Text {
         anchors.fill: parent
         hoverEnabled: true
         onEntered: {
-            indicator.color = Theme.chartreuse
+            indicator.isHovered = true
         }
         onExited: {
-            indicator.color = isActive ? Theme.electricBlue : Theme.emerald
+            indicator.isHovered = false
         }
         onClicked: {
             workspace.activate()
-        }
-    }
-
-    // React to the focused workspace changing.
-    Connections {
-        target: Hyprland
-        function onFocusedWorkspaceChanged() {
-            // Update the color when the focused workspace changes
-            indicator.color = isActive ? Theme.electricBlue : Theme.emerald
         }
     }
 }

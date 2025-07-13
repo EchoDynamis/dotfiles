@@ -53,12 +53,15 @@ Scope {
       }
 
       Workspaces {
+        id: workspaces
         anchors {
             left: icon.right
             leftMargin: 15
             verticalCenter: parent.verticalCenter
         }
       }
+
+      
 
       ClockWidget {
         anchors {
