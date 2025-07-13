@@ -1,7 +1,7 @@
 import QtQuick
 import Quickshell
 import Quickshell.Hyprland
-import "."
+import "./Theme.qml" 
 
 Text {
     id: indicator

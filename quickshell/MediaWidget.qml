@@ -1,0 +1,214 @@
+import Quickshell
+import Quickshell.Widgets
+import QtQuick.Effects
+import QtQuick.Layouts
+import QtQuick.Shapes
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import Quickshell.Services.Mpris
+import "./Players.qml"
+import "./Theme.qml" 
+
+PopupWindow {
+    id: mediaWidgetRoot
+
+    readonly property MprisPlayer player: Players.active
+
+    width: 800 // Example width, adjust as needed
+    height: 550 // Example height, adjust as needed (500 for image + padding)
+
+    background: Item {
+        Rectangle {
+            anchors.fill: parent
+            color: Theme.black
+            opacity: 0.7 // Hyprland blur effect
+            radius: 8 // Rounded corners for eyecandy
+        }
+    }
+
+    ColumnLayout {
+        anchors.fill: parent
+        anchors.margins: 20
+        spacing: 10
+
+        RowLayout {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            // Album Cover
+            Image {
+                id: albumArt
+                Layout.preferredWidth: 500
+                Layout.preferredHeight: 500
+                source: player ? player.trackArtUrl : ""
+                fillMode: Image.PreserveAspectFit
+                sourceSize.width: 500
+                sourceSize.height: 500
+                // Placeholder if no album art
+                Rectangle {
+                    anchors.fill: parent
+                    color: Theme.darkGrey
+                    visible: !albumArt.source
+                    Text {
+                        anchors.centerIn: parent
+                        text: "No Album Art"
+                        color: Theme.silver
+                        font.pixelSize: 20
+                    }
+                }
+            }
+
+            ColumnLayout {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                spacing: 10
+
+                // Song Name - Artist Name
+                Text {
+                    id: trackInfoText
+                    Layout.fillWidth: true
+                    text: player ? (player.trackTitle || "Unknown Title") + " - " + (player.trackArtist || "Unknown Artist") : "No media playing"
+                    color: Theme.emerald
+                    font.pixelSize: 24
+                    font.bold: true
+                    wrapMode: Text.WordWrap
+                    horizontalAlignment: Text.AlignHCenter
+                }
+
+                // Progress Slider
+                Slider {
+                    id: progressSlider
+                    Layout.fillWidth: true
+                    from: 0
+                    to: player ? player.length : 0
+                    value: player ? player.position : 0
+                    stepSize: 1
+                    live: true // Update value as user drags
+                    onMoved: {
+                        if (player && player.canSeek) {
+                            player.seek(value)
+                        }
+                    }
+                    background: Rectangle {
+                        implicitWidth: 200
+                        implicitHeight: 4
+                        color: Theme.darkGrey
+                        radius: 2
+                        Rectangle {
+                            width: progressSlider.visualPosition * parent.width
+                            height: parent.height
+                            color: Theme.emerald
+                            radius: 2
+                        }
+                    }
+                    handle: Rectangle {
+                        x: progressSlider.leftPadding + progressSlider.visualPosition * (progressSlider.availableWidth - width)
+                        y: progressSlider.topPadding + progressSlider.availableHeight / 2 - height / 2
+                        implicitWidth: 16
+                        implicitHeight: 16
+                        radius: 8
+                        color: Theme.veronica
+                    }
+                }
+
+                // Current Time / Total Time
+                Text {
+                    Layout.fillWidth: true
+                    text: {
+                        function formatTime(seconds) {
+                            const minutes = Math.floor(seconds / 60);
+                            const remainingSeconds = Math.floor(seconds % 60);
+                            return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+                        }
+                        if (player) {
+                            return `${formatTime(player.position)} / ${formatTime(player.length)}`;
+                        } else {
+                            return "0:00 / 0:00";
+                        }
+                    }
+                    color: Theme.silver
+                    font.pixelSize: 14
+                    horizontalAlignment: Text.AlignHCenter
+                }
+
+                // Media Controls (Previous, Play/Pause, Next)
+                RowLayout {
+                    Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignHCenter
+                    spacing: 20
+
+                    Button {
+                        id: prevButton
+                        Layout.preferredWidth: 60
+                        Layout.preferredHeight: 60
+                        background: Rectangle { color: "transparent" }
+                        Image {
+                            source: "assets/icons/previous.svg"
+                            anchors.fill: parent
+                            anchors.centerIn: parent
+                            fillMode: Image.PreserveAspectFit
+                        }
+                        onClicked: {
+                            if (player && player.canGoPrevious) {
+                                player.previous()
+                            }
+                        }
+                    }
+
+                    Button {
+                        id: playPauseButton
+                        Layout.preferredWidth: 60
+                        Layout.preferredHeight: 60
+                        background: Rectangle { color: "transparent" }
+                        Image {
+                            source: player && player.playbackState === MprisPlaybackState.Playing ? "assets/icons/pause.svg" : "assets/icons/play.svg"
+                            anchors.fill: parent
+                            anchors.centerIn: parent
+                            fillMode: Image.PreserveAspectFit
+                        }
+                        onClicked: {
+                            if (player && player.canTogglePlaying) {
+                                player.togglePlaying()
+                            }
+                        }
+                    }
+
+                    Button {
+                        id: nextButton
+                        Layout.preferredWidth: 60
+                        Layout.preferredHeight: 60
+                        background: Rectangle { color: "transparent" }
+                        Image {
+                            source: "assets/icons/next.svg"
+                            anchors.fill: parent
+                            anchors.centerIn: parent
+                            fillMode: Image.PreserveAspectFit
+                        }
+                        onClicked: {
+                            if (player && player.canGoNext) {
+                                player.next()
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Timer to update position
+    Timer {
+        id: positionUpdateTimer
+        interval: 1000 // Update every second
+        repeat: true
+        running: player && player.playbackState === MprisPlaybackState.Playing
+        onTriggered: {
+            if (player && player.positionSupported) {
+                // Manually trigger position update if not reactive
+                // This might not be necessary if player.position is already reactive
+                // but it's good practice based on the Mpris docs.
+                progressSlider.value = player.position
+            }
+        }
+    }
+}

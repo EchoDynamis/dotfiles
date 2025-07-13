@@ -1,6 +1,8 @@
 import Quickshell
 import QtQuick
 import "."
+import "./Theme.qml"
+import "./MediaWidget.qml"
 
 Scope {
 
@@ -61,6 +63,14 @@ Scope {
         }
       }
 
+      MediaDisplay {
+          id: mediaDisplay
+          anchors.centerIn: parent
+          onClicked: {
+              mediaWidgetInstance.visible = !mediaWidgetInstance.visible
+          }
+      }
+
       
 
       ClockWidget {
@@ -77,6 +87,14 @@ Scope {
         anchor.item: icon
         anchor.rect.x: icon.width / 2 - width / 2
         anchor.rect.y: icon.height + 8
+      }
+
+      MediaWidget {
+          id: mediaWidgetInstance
+          visible: false
+          screen: modelData // Pass the screen property
+          x: (parent.width - width) / 2 // Center horizontally
+          y: parent.height + 4 // 4px gap below the bar
       }
     }
   }
