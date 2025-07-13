@@ -26,3 +26,11 @@
 
 ## 2025-07-13 16:30:00 - Fixed MediaDisplay.qml Syntax Error
 - Removed an extra closing brace `}` at the end of the file, resolving the "Unexpected token `}`" error.
+
+## 2025-07-13 16:45:00 - Corrected MediaDisplay.qml Syntax Error (Missing Brace)
+- Added missing closing braces `}` for `nextButton` and `RowLayout` in `MediaDisplay.qml`, resolving the "Expected token `}`" error.
+
+## 2025-07-13 17:00:00 - Implemented Bar UI Enhancements
+- `MediaDisplay.qml`: Metadata (`mediaInfoText`) now changes color to `Theme.chartreuse` on hover.
+- `WorkspaceIndicator.qml`: Font family set to "Orbitron".
+- `Theme.qml`: `fontSizeBase` increased to 20px for global bar font size adjustment.

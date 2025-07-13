@@ -25,6 +25,6 @@ QtObject {
   // Typography
   readonly property string fontFamilyHeaders: "Orbitron"
   readonly property string fontFamilyText: "JetBrains Mono"
-  readonly property int fontSizeBase: 16
+  readonly property int fontSizeBase: 20
   readonly property int implicitHeightUi: 40
 }

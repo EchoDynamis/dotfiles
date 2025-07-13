@@ -52,7 +52,7 @@ RowLayout {
                     return "No media playing"
                 }
             }
-            color: Theme.emerald
+            color: parent.hovered ? Theme.chartreuse : Theme.emerald
             font.family: "Orbitron"
             font.pixelSize: 16 // Based on design language for 4K
             font.bold: true

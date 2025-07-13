@@ -14,7 +14,7 @@ Text {
 
     text: workspace.name
     color: (isActive || isHovered) ? Theme.chartreuse : Theme.emerald // Color depends on active or hover state
-    font.family: Theme.fontFamilyText
+    font.family: "Orbitron"
     font.pixelSize: Theme.fontSizeBase
 
     MouseArea {
