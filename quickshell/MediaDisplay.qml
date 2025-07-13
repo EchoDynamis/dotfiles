@@ -32,18 +32,25 @@ RowLayout {
                 Players.active.previous()
             }
         }
-        onHoveredChanged: {
-            console.log("Previous button hovered: " + prevButton.hovered);
-        }
     }
 
     // Media Info (Song Name - Artist Name)
     MouseArea {
+        id: metadataMouseArea
         Layout.preferredWidth: 400
+        implicitHeight: 50 // Added implicitHeight
+        hoverEnabled: true // Crucial for onEntered/onExited
         onClicked: mediaDisplayRoot.clicked()
+        onEntered: {
+            metadata.isHovered = true
+        }
+        onExited: {
+            metadata.isHovered = false
+        }
 
         Text {
-            id: mediaInfoText
+            id: metadata
+            property bool isHovered: false // New property
             anchors.centerIn: parent
             text: {
                 if (Players.active) {
@@ -52,7 +59,7 @@ RowLayout {
                     return "No media playing"
                 }
             }
-            color: parent.hovered ? Theme.chartreuse : Theme.emerald
+            color: metadata.isHovered ? Theme.chartreuse : Theme.emerald // Bind to new property
             font.family: "Orbitron"
             font.pixelSize: 16 // Based on design language for 4K
             font.bold: true
@@ -79,9 +86,6 @@ RowLayout {
             if (Players.active && Players.active.canGoNext) {
                 Players.active.next()
             }
-        }
-        onHoveredChanged: {
-            console.log("Next button hovered: " + nextButton.hovered);
         }
     }
 }

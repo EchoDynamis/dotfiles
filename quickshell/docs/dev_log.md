@@ -34,3 +34,23 @@
 - `MediaDisplay.qml`: Metadata (`mediaInfoText`) now changes color to `Theme.chartreuse` on hover.
 - `WorkspaceIndicator.qml`: Font family set to "Orbitron".
 - `Theme.qml`: `fontSizeBase` increased to 20px for global bar font size adjustment.
+
+## 2025-07-13 17:15:00 - Refactored MediaDisplay.qml Variable Name and Removed Debugging
+- Renamed `mediaInfoText` to `metadata` for clarity.
+- Removed debug `onHoveredChanged` messages from previous and next buttons.
+
+## 2025-07-13 17:30:00 - Fixed MediaDisplay.qml Metadata Hover Color
+- Moved `color` binding for `metadata` to `MouseArea.onHoveredChanged` to ensure proper hover effect.
+
+## 2025-07-13 17:45:00 - Added Debugging for MediaDisplay.qml Metadata Hover
+- Added `console.log` to `MouseArea.onHoveredChanged` to debug metadata hover behavior.
+
+## 2025-07-13 18:00:00 - Fixed MediaDisplay.qml MouseArea Height
+- Added `implicitHeight: 50` to the `MouseArea` to resolve "zero height" warning and enable hover effect.
+- Removed debug `console.log` from `MouseArea.onHoveredChanged`.
+
+## 2025-07-13 18:15:00 - Fixed MediaDisplay.qml Metadata Hover ReferenceError
+- Added `id: metadataMouseArea` to `MouseArea` and updated `onHoveredChanged` to use `metadataMouseArea.hovered`.
+
+## 2025-07-13 18:30:00 - Fixed MediaDisplay.qml Metadata Hover Logic
+- Implemented `isHovered` property on `Text` and used `MouseArea.onEntered`/`onExited` to update it, aligning with project's idiomatic hover handling.
