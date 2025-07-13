@@ -1,6 +1,0 @@
-2025/07/12-17:38:02.611 fa9c Creating DB /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_freesvgicons.com_0.indexeddb.leveldb since it was missing.
-2025/07/12-17:38:02.613 fa9c Reusing MANIFEST /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_freesvgicons.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/07/12-17:42:08.951 fa9d Level-0 table #5: started
-2025/07/12-17:42:08.953 fa9d Level-0 table #5: 1114 bytes OK
-2025/07/12-17:42:08.954 fa9d Delete type=0 #3
-2025/07/12-17:42:08.954 fa9d Manual compaction at level-0 from (begin) .. (end); will stop at (end)

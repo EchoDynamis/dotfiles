@@ -1,7 +1,0 @@
-2025/07/12-16:51:21.503 fa9d Reusing MANIFEST /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/WebStorage/62/IndexedDB/indexeddb.leveldb/MANIFEST-000001
-2025/07/12-16:51:21.503 fa9d Recovering log #4
-2025/07/12-16:51:21.504 fa9d Reusing old log /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/WebStorage/62/IndexedDB/indexeddb.leveldb/000004.log 
-2025/07/12-16:51:21.516 faab Level-0 table #8: started
-2025/07/12-16:51:21.518 faab Level-0 table #8: 102406 bytes OK
-2025/07/12-16:51:21.520 faab Delete type=0 #4
-2025/07/12-16:51:21.520 fa9c Manual compaction at level-0 from '\x00\x03\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at (end)

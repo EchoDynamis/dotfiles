@@ -1,7 +1,0 @@
-2025/07/12-17:11:54.286 fa9c Reusing MANIFEST /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_chatgpt.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/07/12-17:11:54.286 fa9c Recovering log #3
-2025/07/12-17:11:54.287 fa9c Reusing old log /home/echodynamis/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_chatgpt.com_0.indexeddb.leveldb/000003.log 
-2025/07/12-18:03:00.420 fa9d Level-0 table #5: started
-2025/07/12-18:03:00.422 fa9d Level-0 table #5: 360182 bytes OK
-2025/07/12-18:03:00.424 fa9d Delete type=0 #3
-2025/07/12-18:03:00.424 fa9d Manual compaction at level-0 from (begin) .. (end); will stop at (end)
