@@ -31,182 +31,166 @@ Item {
         anchors.margins: 20
         spacing: 10
 
-        RowLayout {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            // Album Cover
-            Image {
-                id: albumArt
-                Layout.preferredWidth: 500
-                Layout.preferredHeight: 500
-                source: player ? player.trackArtUrl : ""
-                fillMode: Image.PreserveAspectFit
-                sourceSize.width: 500
-                sourceSize.height: 500
-                // Placeholder if no album art
-                Rectangle {
-                    anchors.fill: parent
-                    color: Theme.darkGrey
-                    visible: !albumArt.source
-                    Text {
-                        anchors.centerIn: parent
-                        text: "No Album Art"
-                        color: Theme.silver
-                        font.pixelSize: 20
-                    }
-                }
-            }
-
-            ColumnLayout {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                spacing: 10
-
-                // Media Controls (Previous, Song Title, Next)
-                Item {
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: 60
-
-                    Button {
-                        id: prevButton
-                        width: 60
-                        height: 60
-                        anchors.left: parent.left
-                        background: Rectangle { color: "transparent" }
-                        Image {
-                            id: prevImage
-                            source: "assets/icons/previous_emerald.svg"
-                            anchors.fill: parent
-                            anchors.centerIn: parent
-                            fillMode: Image.PreserveAspectFit
-                        }
-                        onClicked: {
-                            if (player && player.canGoPrevious) {
-                                player.previous()
-                            }
-                        }
-                        onHoveredChanged: {
-                            prevImage.source = hovered ? "assets/icons/previous_chartreuse.svg" : "assets/icons/previous_emerald.svg"
-                        }
-                    }
-
-                    Text {
-                        id: trackInfoText
-                        anchors.left: prevButton.right
-                        anchors.right: nextButton.left
-                        anchors.verticalCenter: parent.verticalCenter
-                        anchors.leftMargin: 10
-                        anchors.rightMargin: 10
-                        text: player ? (player.trackTitle || "Unknown Title") + " - " + (player.trackArtist || "Unknown Artist") : "No media playing"
-                        color: Theme.emerald
-                        font.family: "Orbitron"
-                        font.pixelSize: 24
-                        font.bold: true
-                        wrapMode: Text.WordWrap
-                        horizontalAlignment: Text.AlignHCenter
-                    }
-
-                    Button {
-                        id: nextButton
-                        width: 60
-                        height: 60
-                        anchors.right: parent.right
-                        background: Rectangle { color: "transparent" }
-                        Image {
-                            id: nextImage
-                            source: "assets/icons/next_emerald.svg"
-                            anchors.fill: parent
-                            anchors.centerIn: parent
-                            fillMode: Image.PreserveAspectFit
-                        }
-                        onClicked: {
-                            if (player && player.canGoNext) {
-                                player.next()
-                            }
-                        }
-                        onHoveredChanged: {
-                            nextImage.source = hovered ? "assets/icons/next_chartreuse.svg" : "assets/icons/next_emerald.svg"
-                        }
-                    }
-                }
-
-                // Play/Pause Button
-                Button {
-                    id: playPauseButton
-                    Layout.alignment: Qt.AlignHCenter
-                    Layout.preferredWidth: 60
-                    Layout.preferredHeight: 60
-                    background: Rectangle { color: "transparent" }
-                    Image {
-                        source: player && player.playbackState === MprisPlaybackState.Playing ? "assets/icons/pause.svg" : "assets/icons/play.svg"
-                        anchors.fill: parent
-                        anchors.centerIn: parent
-                        fillMode: Image.PreserveAspectFit
-                    }
-                    onClicked: {
-                        if (player && player.canTogglePlaying) {
-                            player.togglePlaying()
-                        }
-                    }
-                }
-
-                // Progress Slider
-                Slider {
-                    id: progressSlider
-                    Layout.fillWidth: true
-                    from: 0
-                    to: player ? player.length : 0
-                    value: player ? player.position : 0
-                    stepSize: 1
-                    live: true // Update value as user drags
-                    onMoved: {
-                        if (player && player.canSeek) {
-                            player.seek(value)
-                        }
-                    }
-                    background: Rectangle {
-                        implicitWidth: 200
-                        implicitHeight: 4
-                        color: Theme.darkGrey
-                        radius: 2
-                        Rectangle {
-                            width: progressSlider.visualPosition * parent.width
-                            height: parent.height
-                            color: Theme.emerald
-                            radius: 2
-                        }
-                    }
-                    handle: Rectangle {
-                        x: progressSlider.leftPadding + progressSlider.visualPosition * (progressSlider.availableWidth - width)
-                        y: progressSlider.topPadding + progressSlider.availableHeight / 2 - height / 2
-                        implicitWidth: 16
-                        implicitHeight: 16
-                        radius: 8
-                        color: Theme.veronica
-                    }
-                }
-
-                // Current Time / Total Time
+        // Album Cover
+        Image {
+            id: albumArt
+            Layout.preferredWidth: 500
+            Layout.preferredHeight: 500
+            source: player ? player.trackArtUrl : ""
+            fillMode: Image.PreserveAspectFit
+            sourceSize.width: 500
+            sourceSize.height: 500
+            Layout.alignment: Qt.AlignHCenter // Center the album art
+            // Placeholder if no album art
+            Rectangle {
+                anchors.fill: parent
+                color: Theme.darkGrey
+                visible: !albumArt.source
                 Text {
-                    Layout.fillWidth: true
-                    text: {
-                        function formatTime(seconds) {
-                            const minutes = Math.floor(seconds / 60);
-                            const remainingSeconds = Math.floor(seconds % 60);
-                            return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
-                        }
-                        if (player) {
-                            return `${formatTime(player.position)} / ${formatTime(player.length)}`;
-                        } else {
-                            return "0:00 / 0:00";
-                        }
-                    }
+                    anchors.centerIn: parent
+                    text: "No Album Art"
                     color: Theme.silver
-                    font.pixelSize: 14
-                    horizontalAlignment: Text.AlignHCenter
+                    font.pixelSize: 20
                 }
             }
+        }
+
+        // Media Controls (Previous, Song Title, Next)
+        GridLayout {
+            Layout.fillWidth: true
+            columns: 3
+
+            Button {
+                id: prevButton
+                Layout.preferredWidth: 60
+                Layout.preferredHeight: 60
+                background: Rectangle { color: "transparent" }
+                Image {
+                    id: prevImage
+                    source: "assets/icons/previous_emerald.svg"
+                    anchors.fill: parent
+                    anchors.centerIn: parent
+                    fillMode: Image.PreserveAspectFit
+                }
+                onClicked: {
+                    if (player && player.canGoPrevious) {
+                        player.previous()
+                    }
+                }
+                onHoveredChanged: {
+                    prevImage.source = hovered ? "assets/icons/previous_chartreuse.svg" : "assets/icons/previous_emerald.svg"
+                }
+            }
+
+            Text {
+                id: trackInfoText
+                Layout.fillWidth: true
+                text: player ? (player.trackTitle || "Unknown Title") + " - " + (player.trackArtist || "Unknown Artist") : "No media playing"
+                color: Theme.emerald
+                font.family: "Orbitron"
+                font.pixelSize: 24
+                font.bold: true
+                wrapMode: Text.WordWrap
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Button {
+                id: nextButton
+                Layout.preferredWidth: 60
+                Layout.preferredHeight: 60
+                background: Rectangle { color: "transparent" }
+                Image {
+                    id: nextImage
+                    source: "assets/icons/next_emerald.svg"
+                    anchors.fill: parent
+                    anchors.centerIn: parent
+                    fillMode: Image.PreserveAspectFit
+                }
+                onClicked: {
+                    if (player && player.canGoNext) {
+                        player.next()
+                    }
+                }
+                onHoveredChanged: {
+                    nextImage.source = hovered ? "assets/icons/next_chartreuse.svg" : "assets/icons/next_emerald.svg"
+                }
+            }
+        }
+
+        // Play/Pause Button
+        Button {
+            id: playPauseButton
+            Layout.alignment: Qt.AlignHCenter
+            Layout.preferredWidth: 60
+            Layout.preferredHeight: 60
+            background: Rectangle { color: "transparent" }
+            Image {
+                source: player && player.playbackState === MprisPlaybackState.Playing ? "assets/icons/pause.svg" : "assets/icons/play.svg"
+                anchors.fill: parent
+                anchors.centerIn: parent
+                fillMode: Image.PreserveAspectFit
+            }
+            onClicked: {
+                if (player && player.canTogglePlaying) {
+                    player.togglePlaying()
+                }
+            }
+        }
+
+        // Progress Slider
+        Slider {
+            id: progressSlider
+            Layout.fillWidth: true
+            from: 0
+            to: player ? player.length : 0
+            value: player ? player.position : 0
+            stepSize: 1
+            live: true // Update value as user drags
+            onMoved: {
+                if (player && player.canSeek) {
+                    player.seek(value)
+                }
+            }
+            background: Rectangle {
+                implicitWidth: 200
+                implicitHeight: 4
+                color: Theme.darkGrey
+                radius: 2
+                Rectangle {
+                    width: progressSlider.visualPosition * parent.width
+                    height: parent.height
+                    color: Theme.emerald
+                    radius: 2
+                }
+            }
+            handle: Rectangle {
+                x: progressSlider.leftPadding + progressSlider.visualPosition * (progressSlider.availableWidth - width)
+                y: progressSlider.topPadding + progressSlider.availableHeight / 2 - height / 2
+                implicitWidth: 16
+                implicitHeight: 16
+                radius: 8
+                color: Theme.veronica
+            }
+        }
+
+        // Current Time / Total Time
+        Text {
+            Layout.fillWidth: true
+            text: {
+                function formatTime(seconds) {
+                    const minutes = Math.floor(seconds / 60);
+                    const remainingSeconds = Math.floor(seconds % 60);
+                    return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+                }
+                if (player) {
+                    return `${formatTime(player.position)} / ${formatTime(player.length)}`;
+                } else {
+                    return "0:00 / 0:00";
+                }
+            }
+            color: Theme.silver
+            font.pixelSize: 14
+            horizontalAlignment: Text.AlignHCenter
         }
     }
 

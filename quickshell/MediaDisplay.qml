@@ -3,7 +3,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 import "./Players.qml"
-import "./Theme.qml" 
+import "./Theme.qml"
 
 RowLayout {
     id: mediaDisplayRoot
@@ -17,12 +17,12 @@ RowLayout {
     // Previous Button
     Button {
         id: prevButton
-        Layout.preferredWidth: 40
-        Layout.preferredHeight: 40
+        implicitWidth: 40
+        implicitHeight: 40
         background: Rectangle { color: "transparent" }
         Image {
             id: prevImage
-            source: "assets/icons/previous_emerald.svg"
+            source: prevButton.hovered ? "assets/icons/previous_chartreuse.svg" : "assets/icons/previous_emerald.svg"
             anchors.fill: parent
             anchors.centerIn: parent
             fillMode: Image.PreserveAspectFit
@@ -33,13 +33,13 @@ RowLayout {
             }
         }
         onHoveredChanged: {
-            prevImage.source = hovered ? "assets/icons/previous_chartreuse.svg" : "assets/icons/previous_emerald.svg"
+            console.log("Previous button hovered: " + prevButton.hovered);
         }
     }
 
     // Media Info (Song Name - Artist Name)
     MouseArea {
-        Layout.fillWidth: true
+        Layout.preferredWidth: 400
         onClicked: mediaDisplayRoot.clicked()
 
         Text {
@@ -65,12 +65,12 @@ RowLayout {
     // Next Button
     Button {
         id: nextButton
-        Layout.preferredWidth: 40
-        Layout.preferredHeight: 40
+        implicitWidth: 40
+        implicitHeight: 40
         background: Rectangle { color: "transparent" }
         Image {
             id: nextImage
-            source: "assets/icons/next_emerald.svg"
+            source: nextButton.hovered ? "assets/icons/next_chartreuse.svg" : "assets/icons/next_emerald.svg"
             anchors.fill: parent
             anchors.centerIn: parent
             fillMode: Image.PreserveAspectFit
@@ -81,7 +81,7 @@ RowLayout {
             }
         }
         onHoveredChanged: {
-            nextImage.source = hovered ? "assets/icons/next_chartreuse.svg" : "assets/icons/next_emerald.svg"
+            console.log("Next button hovered: " + nextButton.hovered);
         }
     }
 }
