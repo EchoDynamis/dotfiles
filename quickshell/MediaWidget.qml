@@ -14,12 +14,21 @@ PopupWindow {
     id: mediaWidgetRoot
     visible: false
     color: Theme.black
+
+    property string currentTimeDisplay: "0:00 / 0:00" // New property for time display
+
     // HyprlandWindow.opacity: 0.7
 
     readonly property MprisPlayer player: Players.active
 
     implicitWidth: 800 // Example width, adjust as needed
     implicitHeight: 750 // Expanded height to fit all controls
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = Math.floor(seconds % 60);
+        return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+    }
 
     
 
@@ -173,18 +182,7 @@ PopupWindow {
         // Current Time / Total Time
         Text {
             Layout.fillWidth: true
-            text: {
-                function formatTime(seconds) {
-                    const minutes = Math.floor(seconds / 60);
-                    const remainingSeconds = Math.floor(seconds % 60);
-                    return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
-                }
-                if (player) {
-                    return `${formatTime(player.position)} / ${formatTime(player.length)}`;
-                } else {
-                    return "0:00 / 0:00";
-                }
-            }
+            text: mediaWidgetRoot.currentTimeDisplay
             color: Theme.silver
             font.pixelSize: 14
             horizontalAlignment: Text.AlignHCenter
@@ -196,13 +194,14 @@ PopupWindow {
         id: positionUpdateTimer
         interval: 1000 // Update every second
         repeat: true
-        running: true
+        running: player && player.playbackState === MprisPlaybackState.Playing
         onTriggered: {
+            console.log("DEBUG: Position update timer triggered. Player position: " + player.position);
             if (player && player.positionSupported) {
-                // Manually trigger position update if not reactive
-                // This might not be necessary if player.position is already reactive
-                // but it's good practice based on the Mpris docs.
-                progressSlider.value = player.position
+                progressSlider.value = player.position;
+                mediaWidgetRoot.currentTimeDisplay = mediaWidgetRoot.formatTime(player.position) + " / " + mediaWidgetRoot.formatTime(player.length);
+            } else {
+                mediaWidgetRoot.currentTimeDisplay = "0:00 / 0:00"; // Reset if no player
             }
         }
     }
