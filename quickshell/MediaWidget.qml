@@ -196,7 +196,7 @@ PopupWindow {
         repeat: true
         running: player && player.playbackState === MprisPlaybackState.Playing
         onTriggered: {
-            console.log("DEBUG: Position update timer triggered. Player position: " + player.position);
+            
             if (player && player.positionSupported) {
                 progressSlider.value = player.position;
                 mediaWidgetRoot.currentTimeDisplay = mediaWidgetRoot.formatTime(player.position) + " / " + mediaWidgetRoot.formatTime(player.length);

@@ -67,7 +67,6 @@ Scope {
           id: mediaDisplay
           anchors.centerIn: parent
           onClicked: {
-              console.log("MediaDisplay clicked, toggling MediaWidget visibility.")
               mediaWidgetInstance.visible = !mediaWidgetInstance.visible
           }
       }

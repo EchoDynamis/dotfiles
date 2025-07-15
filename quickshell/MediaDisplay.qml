@@ -40,10 +40,7 @@ RowLayout {
         Layout.preferredWidth: 400
         implicitHeight: 50 // Added implicitHeight
         hoverEnabled: true // Crucial for onEntered/onExited
-        onClicked: {
-            console.log("MediaDisplay clicked!")
-            mediaDisplayRoot.clicked()
-        }
+        onClicked: mediaDisplayRoot.clicked()
         onEntered: {
             metadata.isHovered = true
         }
