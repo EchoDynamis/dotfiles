@@ -1,5 +1,3 @@
-pragma ComponentBehavior: Bound
-
 import Quickshell
 import Quickshell.Widgets
 import Quickshell.Services.Mpris
@@ -8,23 +6,22 @@ import QtQuick.Controls
 import QtQuick.Effects
 import QtQuick.Layouts
 import QtQuick.Shapes
+import Quickshell.Hyprland
 import "./Players.qml"
 import "./Theme.qml"
 
 PopupWindow {
     id: mediaWidgetRoot
+    visible: false
+    color: Theme.black
+    // HyprlandWindow.opacity: 0.7
 
     readonly property MprisPlayer player: Players.active
 
-    width: 800 // Example width, adjust as needed
-    height: 550 // Example height, adjust as needed (500 for image + padding)
+    implicitWidth: 800 // Example width, adjust as needed
+    implicitHeight: 750 // Expanded height to fit all controls
 
-    Rectangle {
-        anchors.fill: parent
-        color: Theme.black
-        opacity: 0.7 // Hyprland blur effect
-        radius: 8 // Rounded corners for eyecandy
-    }
+    
 
     ColumnLayout {
         anchors.fill: parent
@@ -199,7 +196,7 @@ PopupWindow {
         id: positionUpdateTimer
         interval: 1000 // Update every second
         repeat: true
-        running: player && player.playbackState === MprisPlaybackState.Playing
+        running: true
         onTriggered: {
             if (player && player.positionSupported) {
                 // Manually trigger position update if not reactive

@@ -5,7 +5,6 @@ import "./Theme.qml"
 import "./MediaWidget.qml"
 
 Scope {
-  signal mediaDisplayClicked()
 
   Variants {
     model: Quickshell.screens
@@ -68,8 +67,8 @@ Scope {
           id: mediaDisplay
           anchors.centerIn: parent
           onClicked: {
-              console.log("MediaDisplay clicked, emitting signal.")
-              mediaDisplayClicked()
+              console.log("MediaDisplay clicked, toggling MediaWidget visibility.")
+              mediaWidgetInstance.visible = !mediaWidgetInstance.visible
           }
       }
 
@@ -90,7 +89,13 @@ Scope {
         anchor.rect.y: icon.height + 8
       }
 
-      
+      MediaWidget {
+          id: mediaWidgetInstance
+          visible: false
+          anchor.item: mediaDisplay
+          anchor.rect.x: mediaDisplay.width / 2 - mediaWidgetInstance.implicitWidth / 2
+          anchor.rect.y: mediaDisplay.height + 8
+      }
     }
   }
 }
