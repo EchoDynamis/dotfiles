@@ -5,6 +5,7 @@ import "./Theme.qml"
 import "./MediaWidget.qml"
 
 Scope {
+  signal mediaDisplayClicked()
 
   Variants {
     model: Quickshell.screens
@@ -67,13 +68,13 @@ Scope {
           id: mediaDisplay
           anchors.centerIn: parent
           onClicked: {
-              mediaWidgetInstance.visible = !mediaWidgetInstance.visible
+              console.log("MediaDisplay clicked, emitting signal.")
+              mediaDisplayClicked()
           }
       }
 
-      
-
       ClockWidget {
+        id: clockWidget // Added ID for anchoring
         anchors {
           right: parent.right
           rightMargin: 10
@@ -89,12 +90,7 @@ Scope {
         anchor.rect.y: icon.height + 8
       }
 
-      MediaWidget {
-          id: mediaWidgetInstance
-          visible: false
-          x: (parent.width - width) / 2 // Center horizontally
-          y: parent.height + 4 // 4px gap below the bar
-      }
+      
     }
   }
 }

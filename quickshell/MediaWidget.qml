@@ -11,7 +11,7 @@ import QtQuick.Shapes
 import "./Players.qml"
 import "./Theme.qml"
 
-Item {
+PopupWindow {
     id: mediaWidgetRoot
 
     readonly property MprisPlayer player: Players.active
