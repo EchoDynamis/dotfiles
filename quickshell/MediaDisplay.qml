@@ -17,8 +17,8 @@ RowLayout {
     // Previous Button
     Button {
         id: prevButton
-        implicitWidth: 40
-        implicitHeight: 40
+        implicitWidth: 20
+        implicitHeight: 20
         background: Rectangle { color: "transparent" }
         Image {
             id: prevImage
@@ -26,6 +26,8 @@ RowLayout {
             anchors.fill: parent
             anchors.centerIn: parent
             fillMode: Image.PreserveAspectFit
+            sourceSize.width: 20
+            sourceSize.height: 20
         }
         onClicked: {
             if (Players.active && Players.active.canGoPrevious) {
@@ -72,8 +74,8 @@ RowLayout {
     // Next Button
     Button {
         id: nextButton
-        implicitWidth: 40
-        implicitHeight: 40
+        implicitWidth: 20
+        implicitHeight: 20
         background: Rectangle { color: "transparent" }
         Image {
             id: nextImage
@@ -81,6 +83,8 @@ RowLayout {
             anchors.fill: parent
             anchors.centerIn: parent
             fillMode: Image.PreserveAspectFit
+            sourceSize.width: 20
+            sourceSize.height: 20
         }
         onClicked: {
             if (Players.active && Players.active.canGoNext) {
